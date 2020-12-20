@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+label{
+  font-weight: bolder;
+  font-size: larger !important;
+}
+
+#contact-form-submit-message-container{
+  position: relative;
+}
+
+#contact-form-submit-message-container .ant-row:last-child{
+  position:absolute !important;
+  top: 88% !important;
+  left: auto;
+  right: 0;
+}
+
+.ant-input{
+  border: black solid 0.3em !important;
+}
+
+button[type=submit]{
+  background-color: black;
+  border: black;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+button[type=submit]:hover{
+  background-color: rgb(29, 27, 27);
+  
+}
