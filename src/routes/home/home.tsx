@@ -148,27 +148,26 @@ const ContactUs = () => {
                 >
                     <Input />
                 </Form.Item>
-            <div id="contact-form-submit-message-container">
-                <Form.Item
-                    label="Message"
-                    name="message"
-            
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please input your message",
-                        },
-                    ]}
-                >
-                    <Input.TextArea style={{height:"260px"}} />
-                </Form.Item>
+                <div id="contact-form-submit-message-container">
+                    <Form.Item
+                        label="Message"
+                        name="message"
+                        rules={[
+                            {
+                                required: true,
+                                message: "Please input your message",
+                            },
+                        ]}
+                    >
+                        <Input.TextArea style={{ height: "260px" }} />
+                    </Form.Item>
 
-                <Form.Item >
-                    <Button    type="primary" htmlType="submit">
-                        Submit Form
-                    </Button>
-                </Form.Item>
-            </div>
+                    <Form.Item>
+                        <Button type="primary" htmlType="submit">
+                            Submit Form
+                        </Button>
+                    </Form.Item>
+                </div>
             </Form>
         </div>
     );
@@ -247,36 +246,56 @@ class Home extends React.Component {
                         justify="center"
                     >
                         <Col className="gutter-row" span={6}>
-                            <Image
-                                height={"100%"}
-                                preview={false}
-                                width={"100%"}
-                                src={dzstartupimage}
-                            />
+                            <a target="_blank"    rel="noreferrer"
+                                href="http://dzstartups.com/"
+                                title="algeria ai project"
+                            >
+                                <Image
+                                    height={"100%"}
+                                    preview={false}
+                                    width={"100%"}
+                                    src={dzstartupimage}
+                                />
+                            </a>
                         </Col>
                         <Col className="gutter-row" span={6}>
-                            <Image
-                                height={"100%"}
-                                preview={false}
-                                width={"100%"}
-                                src={mubashirimage}
-                            />
+                            <a target="_blank"    rel="noreferrer"
+                                href="https://www.facebook.com/moubachirsv"
+                                title="mubashir silicon valley"
+                            >
+                                <Image
+                                    height={"100%"}
+                                    preview={false}
+                                    width={"100%"}
+                                    src={mubashirimage}
+                                />
+                            </a>
                         </Col>
                         <Col className="gutter-row" span={6}>
-                            <Image
-                                height={"100%"}
-                                preview={false}
-                                width={"100%"}
-                                src={skailabimage}
-                            />
+                            <a target="_blank"    rel="noreferrer"
+                                href="http://skailab.algeria-ai.com/"
+                                title="skailab website"
+                            >
+                                <Image
+                                    height={"100%"}
+                                    preview={false}
+                                    width={"100%"}
+                                    src={skailabimage}
+                                />
+                            </a>
                         </Col>
                         <Col className="gutter-row" span={6}>
-                            <Image
-                                height={"100%"}
-                                preview={false}
-                                width={"100%"}
-                                src={limitlessimage}
-                            />
+                            <a target="_blank"    rel="noreferrer"
+                                href="http://limitlessdz.com/"
+                                title="skailab website"
+                            >
+                                <Image
+                                    height={"100%"}
+                                    preview={false}
+                                    width={"100%"}
+                                    src={limitlessimage}
+                                />
+                            </a>
                         </Col>
                     </Row>
 
