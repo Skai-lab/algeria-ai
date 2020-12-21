@@ -57,7 +57,6 @@ const FooterSection = () => (
 const ContactUsHeader = () => (
     <div id="contact-us-header">
         <Typography.Title
-            
             style={{
                 textAlign: "center",
                 fontSize: "3em",
@@ -68,7 +67,6 @@ const ContactUsHeader = () => (
             Register Now for AI Academy!
         </Typography.Title>
         <Typography.Paragraph
-        
             style={{
                 textAlign: "center",
                 width: "50%",
@@ -174,6 +172,74 @@ const ContactUs = () => {
     );
 };
 
+const Projects = () => (
+    <Row
+        wrap={true}
+        gutter={{ xs: 2, sm: 16, md: 24, lg: 32 }}
+        justify="center"
+    >
+        <Col className="gutter-row" span={6}>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="http://dzstartups.com/"
+                title="algeria ai project"
+            >
+                <Image
+                    height={"100%"}
+                    preview={false}
+                    width={"100%"}
+                    src={dzstartupimage}
+                />
+            </a>
+        </Col>
+        <Col className="gutter-row" span={6}>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/moubachirsv"
+                title="mubashir silicon valley"
+            >
+                <Image
+                    height={"100%"}
+                    preview={false}
+                    width={"100%"}
+                    src={mubashirimage}
+                />
+            </a>
+        </Col>
+        <Col className="gutter-row" span={6}>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="http://skailab.algeria-ai.com/"
+                title="skailab website"
+            >
+                <Image
+                    height={"100%"}
+                    preview={false}
+                    width={"100%"}
+                    src={skailabimage}
+                />
+            </a>
+        </Col>
+        <Col className="gutter-row" span={6}>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href="http://limitlessdz.com/"
+                title="skailab website"
+            >
+                <Image
+                    height={"100%"}
+                    preview={false}
+                    width={"100%"}
+                    src={limitlessimage}
+                />
+            </a>
+        </Col>
+    </Row>
+);
 class Home extends React.Component {
     state = {
         text: "",
@@ -212,7 +278,12 @@ class Home extends React.Component {
                 <Layout.Header style={this.white}>
                     <Row justify="space-between">
                         <Col>
-                            <Image  id="logo" preview={false} width={60} src={Logo} />
+                            <Image
+                                id="logo"
+                                preview={false}
+                                width={60}
+                                src={Logo}
+                            />
                         </Col>
                         <Col>
                             <Image
@@ -243,64 +314,7 @@ class Home extends React.Component {
                     </Row>
                 </Layout.Header>
                 <Layout.Content style={this.cards_style}>
-                    <Row
-                        wrap={true}
-                        gutter={{ xs: 2, sm: 16, md: 24, lg: 32 }}
-                        justify="center"
-                    >
-                        <Col className="gutter-row" span={6}>
-                            <a target="_blank"    rel="noreferrer"
-                                href="http://dzstartups.com/"
-                                title="algeria ai project"
-                            >
-                                <Image
-                                    height={"100%"}
-                                    preview={false}
-                                    width={"100%"}
-                                    src={dzstartupimage}
-                                />
-                            </a>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            <a target="_blank"    rel="noreferrer"
-                                href="https://www.facebook.com/moubachirsv"
-                                title="mubashir silicon valley"
-                            >
-                                <Image
-                                    height={"100%"}
-                                    preview={false}
-                                    width={"100%"}
-                                    src={mubashirimage}
-                                />
-                            </a>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            <a target="_blank"    rel="noreferrer"
-                                href="http://skailab.algeria-ai.com/"
-                                title="skailab website"
-                            >
-                                <Image
-                                    height={"100%"}
-                                    preview={false}
-                                    width={"100%"}
-                                    src={skailabimage}
-                                />
-                            </a>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            <a target="_blank"    rel="noreferrer"
-                                href="http://limitlessdz.com/"
-                                title="skailab website"
-                            >
-                                <Image
-                                    height={"100%"}
-                                    preview={false}
-                                    width={"100%"}
-                                    src={limitlessimage}
-                                />
-                            </a>
-                        </Col>
-                    </Row>
+                    <Projects />
 
                     <div>
                         <ContactUs />
