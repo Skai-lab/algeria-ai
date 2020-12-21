@@ -16,6 +16,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+#contact-us{
+  width: 58%;
+}
 
 label {
     font-weight: bolder;
@@ -46,4 +49,35 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: rgb(29, 27, 27);
+}
+
+@media (max-width:37.5rem){
+  #logo{
+    width: 2em !important;
+  }
+  #sublogo{
+    width: 6em !important;
+  }
+  #header-button{
+    width: 1.4em !important;
+  }
+  main{
+    padding-left: 2em  !important;
+    padding-right: 2em !important;
+  }
+  form{
+    width:100% !important;
+  }
+  #contact-us-header h2.ant-typography{
+    font-size: 2em !important;
+  }
+  #contact-us-header div.ant-typography{
+    width:100% !important;
+  }
+  footer .ant-row .ant-col:first-child{
+    margin-bottom: 1em;
+  }
+  footer .anticon{
+    font-size: 2em !important;
+  }
 }

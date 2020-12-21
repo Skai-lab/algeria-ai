@@ -55,8 +55,9 @@ const FooterSection = () => (
 );
 
 const ContactUsHeader = () => (
-    <>
+    <div id="contact-us-header">
         <Typography.Title
+            
             style={{
                 textAlign: "center",
                 fontSize: "3em",
@@ -67,6 +68,7 @@ const ContactUsHeader = () => (
             Register Now for AI Academy!
         </Typography.Title>
         <Typography.Paragraph
+        
             style={{
                 textAlign: "center",
                 width: "50%",
@@ -78,7 +80,7 @@ const ContactUsHeader = () => (
             forms to get you registered for AI Academy. We look forward to
             meeting!
         </Typography.Paragraph>
-    </>
+    </div>
 );
 
 const ContactUs = () => {
@@ -95,7 +97,6 @@ const ContactUs = () => {
             <Form
                 style={{
                     marginTop: "5em",
-                    width: "58%",
                     marginLeft: "auto",
                     marginRight: "auto",
                 }}
@@ -211,10 +212,11 @@ class Home extends React.Component {
                 <Layout.Header style={this.white}>
                     <Row justify="space-between">
                         <Col>
-                            <Image preview={false} width={60} src={Logo} />
+                            <Image  id="logo" preview={false} width={60} src={Logo} />
                         </Col>
                         <Col>
                             <Image
+                                id="sublogo"
                                 preview={false}
                                 width={150}
                                 src={Algeria_Text}
@@ -228,6 +230,7 @@ class Home extends React.Component {
                             <Button
                                 icon={
                                     <Image
+                                        id="header-button"
                                         preview={false}
                                         width={30}
                                         src={humberger}
@@ -242,7 +245,7 @@ class Home extends React.Component {
                 <Layout.Content style={this.cards_style}>
                     <Row
                         wrap={true}
-                        gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+                        gutter={{ xs: 2, sm: 16, md: 24, lg: 32 }}
                         justify="center"
                     >
                         <Col className="gutter-row" span={6}>
