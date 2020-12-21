@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import {
     Layout,
     Image,
@@ -171,75 +171,43 @@ const ContactUs = () => {
         </div>
     );
 };
+const projects: { id: number, title: string, src:string,  href:string }[] = [
+    { "id": 0, "title": "algeria ai project", "src":dzstartupimage , "href":"http://dzstartups.com/" },
+    { "id": 1, "title": "mubashir silicon valley", "src":mubashirimage, "href": "https://www.facebook.com/moubachirsv"},
+    { "id": 2, "title": "skailab websit", "src":skailabimage, "href": "http://skailab.algeria-ai.com/"},
+    { "id": 3, "title": "limitless website", "src":limitlessimage, "href": "http://limitlessdz.com/"}
+];
+const Projects = () => {
+    let  content : Array<ReactNode> = []
+    projects.forEach((element) => { 
+        content.push(<Col key={element.id} className="gutter-row" span={6}>
+            <a
+                target="_blank"
+                rel="noreferrer"
+                href={element.href}
+                title={element.title}
+            >
+                <Image
+                    height={"100%"}
+                    preview={false}
+                    width={"100%"}
+                    src={element.src}
+                    alt={element.title}
+                />
+            </a>
+        </Col>)
+    })
 
-const Projects = () => (
+    return(
     <Row
         wrap={true}
         gutter={{ xs: 2, sm: 16, md: 24, lg: 32 }}
         justify="center"
-    >
-        <Col className="gutter-row" span={6}>
-            <a
-                target="_blank"
-                rel="noreferrer"
-                href="http://dzstartups.com/"
-                title="algeria ai project"
-            >
-                <Image
-                    height={"100%"}
-                    preview={false}
-                    width={"100%"}
-                    src={dzstartupimage}
-                />
-            </a>
-        </Col>
-        <Col className="gutter-row" span={6}>
-            <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.facebook.com/moubachirsv"
-                title="mubashir silicon valley"
-            >
-                <Image
-                    height={"100%"}
-                    preview={false}
-                    width={"100%"}
-                    src={mubashirimage}
-                />
-            </a>
-        </Col>
-        <Col className="gutter-row" span={6}>
-            <a
-                target="_blank"
-                rel="noreferrer"
-                href="http://skailab.algeria-ai.com/"
-                title="skailab website"
-            >
-                <Image
-                    height={"100%"}
-                    preview={false}
-                    width={"100%"}
-                    src={skailabimage}
-                />
-            </a>
-        </Col>
-        <Col className="gutter-row" span={6}>
-            <a
-                target="_blank"
-                rel="noreferrer"
-                href="http://limitlessdz.com/"
-                title="skailab website"
-            >
-                <Image
-                    height={"100%"}
-                    preview={false}
-                    width={"100%"}
-                    src={limitlessimage}
-                />
-            </a>
-        </Col>
+    > 
+     {content}
     </Row>
-);
+    )
+}
 class Home extends React.Component {
     state = {
         text: "",
