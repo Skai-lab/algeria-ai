@@ -17,6 +17,7 @@ import {
     TwitterOutlined,
     YoutubeOutlined,
 } from "@ant-design/icons";
+import { Parallax } from "rc-scroll-anim";
 
 import Logo from "../../assets/algeria-ai-logo.png";
 import Algeria_Text from "../../assets/algeria-text.png";
@@ -26,14 +27,32 @@ import mubashirimage from "../../assets/mubashir frame.png";
 import skailabimage from "../../assets/skailab frame.png";
 import limitlessimage from "../../assets/limitless frame.png";
 
-
-const projects: { id: number, title: string, src:string,  href:string }[] = [
-    { "id": 0, "title": "algeria ai project", "src":dzstartupimage , "href":"http://dzstartups.com/" },
-    { "id": 1, "title": "mubashir silicon valley", "src":mubashirimage, "href": "https://www.facebook.com/moubachirsv"},
-    { "id": 2, "title": "skailab websit", "src":skailabimage, "href": "http://skailab.algeria-ai.com/"},
-    { "id": 3, "title": "limitless website", "src":limitlessimage, "href": "http://limitlessdz.com/"}
+const projects: { id: number; title: string; src: string; href: string }[] = [
+    {
+        id: 0,
+        title: "algeria ai project",
+        src: dzstartupimage,
+        href: "http://dzstartups.com/",
+    },
+    {
+        id: 1,
+        title: "mubashir silicon valley",
+        src: mubashirimage,
+        href: "https://www.facebook.com/moubachirsv",
+    },
+    {
+        id: 2,
+        title: "skailab websit",
+        src: skailabimage,
+        href: "http://skailab.algeria-ai.com/",
+    },
+    {
+        id: 3,
+        title: "limitless website",
+        src: limitlessimage,
+        href: "http://limitlessdz.com/",
+    },
 ];
-
 
 const FooterSection = () => (
     <Row justify="space-around">
@@ -183,36 +202,48 @@ const ContactUs = () => {
 };
 
 const Projects = () => {
-    let  content : Array<ReactNode> = []
-    projects.forEach((element) => { 
-        content.push(<Col key={element.id} className="gutter-row" span={6}>
-            <a
-                target="_blank"
-                rel="noreferrer"
-                href={element.href}
-                title={element.title}
-            >
-                <Image
-                    height={"100%"}
-                    preview={false}
-                    width={"100%"}
-                    src={element.src}
-                    alt={element.title}
-                />
-            </a>
-        </Col>)
-    })
+    let content: Array<ReactNode> = [];
+    projects.forEach((element) => {
+        content.push(
+            <Col key={element.id} className="gutter-row" span={6}>
+                <Parallax
+                    animation={[
+                        { x: 0, opacity: 1, playScale: [0, 0.6] },
+                        { y: 1, playScale: [0, 0.3] },
+                        { blur: "10px", playScale: [0, 0.5] },
+                    ]}
+                    style={{ opacity: 1 }}
+                    className="code-box-shape"
+                >
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={element.href}
+                        title={element.title}
+                    >
+                        <Image
+                            height={"100%"}
+                            preview={false}
+                            width={"100%"}
+                            src={element.src}
+                            alt={element.title}
+                        />
+                    </a>
+                </Parallax>
+            </Col>
+        );
+    });
 
-    return(
-    <Row
-        wrap={true}
-        gutter={{ xs: 2, sm: 16, md: 24, lg: 32 }}
-        justify="center"
-    > 
-     {content}
-    </Row>
-    )
-}
+    return (
+        <Row
+            wrap={false}
+            gutter={{ xs: 2, sm: 16, md: 24, lg: 32 }}
+            justify="center"
+        >
+            {content}
+        </Row>
+    );
+};
 class Home extends React.Component {
     state = {
         text: "",
@@ -249,42 +280,52 @@ class Home extends React.Component {
                     <p>comming soon...</p>
                 </Drawer>
                 <Layout.Header style={this.white}>
-                    <Row justify="space-between">
-                        <Col>
-                            <Image
-                                id="logo"
-                                preview={false}
-                                width={60}
-                                src={Logo}
-                            />
-                        </Col>
-                        <Col>
-                            <Image
-                                id="sublogo"
-                                preview={false}
-                                width={150}
-                                src={Algeria_Text}
-                                style={{
-                                    marginLeft: "2em",
-                                    marginRight: "auto",
-                                }}
-                            />
-                        </Col>
-                        <Col>
-                            <Button
-                                icon={
-                                    <Image
-                                        id="header-button"
-                                        preview={false}
-                                        width={30}
-                                        src={humberger}
-                                    />
-                                }
-                                type="text"
-                                onClick={this.showDrawer}
-                            ></Button>
-                        </Col>
-                    </Row>
+                    <Parallax
+                        animation={[
+                            { x: 0, opacity: 1, playScale: [0, 0.6] },
+                            { y: 1, playScale: [0, 0.3] },
+                            { blur: "10px", playScale: [0, 0.5] },
+                        ]}
+                        style={{ opacity: 1 }}
+                        className="code-box-shape"
+                    >
+                        <Row justify="space-between">
+                            <Col>
+                                <Image
+                                    id="logo"
+                                    preview={false}
+                                    width={60}
+                                    src={Logo}
+                                />
+                            </Col>
+                            <Col>
+                                <Image
+                                    id="sublogo"
+                                    preview={false}
+                                    width={150}
+                                    src={Algeria_Text}
+                                    style={{
+                                        marginLeft: "2em",
+                                        marginRight: "auto",
+                                    }}
+                                />
+                            </Col>
+                            <Col>
+                                <Button
+                                    icon={
+                                        <Image
+                                            id="header-button"
+                                            preview={false}
+                                            width={30}
+                                            src={humberger}
+                                        />
+                                    }
+                                    type="text"
+                                    onClick={this.showDrawer}
+                                ></Button>
+                            </Col>
+                        </Row>
+                    </Parallax>
                 </Layout.Header>
                 <Layout.Content style={this.cards_style}>
                     <Projects />
