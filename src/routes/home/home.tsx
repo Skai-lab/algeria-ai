@@ -238,15 +238,15 @@ class Home extends React.Component {
         return (
             <Layout>
                 <Drawer
-                    title="Basic Drawer"
+                    title="Algeria ai side bar comming soon"
                     placement="right"
                     closable={false}
                     onClose={this.onClose}
                     visible={this.state.visible}
                 >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    <p>comming soon...</p>
+                    <p>comming soon...</p>
+                    <p>comming soon...</p>
                 </Drawer>
                 <Layout.Header style={this.white}>
                     <Row justify="space-between">
