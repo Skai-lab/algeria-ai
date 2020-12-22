@@ -282,7 +282,7 @@ class Home extends React.Component {
                 <Layout.Header style={this.white}>
                     <Parallax
                         animation={[
-                            { x: 0, opacity: 1, playScale: [0, 0.6] },
+                            { x: 0, opacity: 1, playScale: [0, 0.7] },
                             { y: 1, playScale: [0, 0.3] },
                             { blur: "10px", playScale: [0, 0.5] },
                         ]}
