@@ -38,7 +38,7 @@ const projects: { id: number; title: string; src: string; href: string }[] = [
         id: 1,
         title: "mubashir silicon valley",
         src: mubashirimage,
-        href: "moubachirsiliconvalley.com",
+        href: "http://moubachirsiliconvalley.com",
     },
     {
         id: 2,
