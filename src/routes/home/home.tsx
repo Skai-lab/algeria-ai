@@ -25,6 +25,16 @@ import dzstartupimage from "../../assets/dz startup frame.png";
 import mubashirimage from "../../assets/mubashir frame.png";
 import skailabimage from "../../assets/skailab frame.png";
 import limitlessimage from "../../assets/limitless frame.png";
+
+
+const projects: { id: number, title: string, src:string,  href:string }[] = [
+    { "id": 0, "title": "algeria ai project", "src":dzstartupimage , "href":"http://dzstartups.com/" },
+    { "id": 1, "title": "mubashir silicon valley", "src":mubashirimage, "href": "https://www.facebook.com/moubachirsv"},
+    { "id": 2, "title": "skailab websit", "src":skailabimage, "href": "http://skailab.algeria-ai.com/"},
+    { "id": 3, "title": "limitless website", "src":limitlessimage, "href": "http://limitlessdz.com/"}
+];
+
+
 const FooterSection = () => (
     <Row justify="space-around">
         <Col>
@@ -171,12 +181,7 @@ const ContactUs = () => {
         </div>
     );
 };
-const projects: { id: number, title: string, src:string,  href:string }[] = [
-    { "id": 0, "title": "algeria ai project", "src":dzstartupimage , "href":"http://dzstartups.com/" },
-    { "id": 1, "title": "mubashir silicon valley", "src":mubashirimage, "href": "https://www.facebook.com/moubachirsv"},
-    { "id": 2, "title": "skailab websit", "src":skailabimage, "href": "http://skailab.algeria-ai.com/"},
-    { "id": 3, "title": "limitless website", "src":limitlessimage, "href": "http://limitlessdz.com/"}
-];
+
 const Projects = () => {
     let  content : Array<ReactNode> = []
     projects.forEach((element) => { 
