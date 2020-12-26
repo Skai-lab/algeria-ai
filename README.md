@@ -1,3 +1,3 @@
 # Algeria ai
 
-the algeria  ai  website  a place where we collect all of our projects
+the algeria  ai  website  is where we collect all of our projects
